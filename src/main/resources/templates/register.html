@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+<h1 th:text="'항목 추가'"/>
+<form method="post" action="/add_done">
+    아이디 <input type="text" name="id"><br>
+    이름 <input type="text" name="name"><br>
+    <button type="submit">추가</button><br>
+</form>
+</body>
+</html>
