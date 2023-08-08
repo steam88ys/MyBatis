@@ -11,7 +11,7 @@
   <tr th:each="p:${list1}">
     <td th:text="${p.id}"/>
     <td th:text="${p.name}"/>
-    <td><a th:href="@{'/delete/'+${id}}">삭제</a></td>
+    <td><a th:href="@{'/delete/'+${p.id}}">삭제</a></td>
   </tr>
 </table>
 <a th:href="@{/add}">회원가입</a>
