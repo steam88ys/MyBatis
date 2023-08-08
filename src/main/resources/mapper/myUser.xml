@@ -7,4 +7,10 @@
     <insert id="insert" parameterType="kr.hs.study.MyBatis.dto.UserDTO">
         insert into myuser(id,name) values(#{id}, #{name})
     </insert>
+    <select id="listAll" resultType="kr.hs.study.MyBatis.dto.UserDTO">
+        select * from myuser order by id asc
+    </select>
+    <delete id="delete" parameterType="kr.hs.study.MyBatis.dto.UserDTO">
+        delete myuser where id=(#{id})
+    </delete>
 </mapper>

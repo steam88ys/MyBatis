@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+<table width="400px">
+  <tr><td>아이디</td><td>이름</td><td>ETC</td></tr>
+  <tr th:each="p:${list1}">
+    <td th:text="${p.id}"/>
+    <td th:text="${p.name}"/>
+    <td><a th:href="@{'/delete/'+${id}}">삭제</a></td>
+  </tr>
+</table>
+<a th:href="@{/add}">회원가입</a>
+</body>
+</html>
